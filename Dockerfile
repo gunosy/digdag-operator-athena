@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM eclipse-temurin:8-jdk
 
 WORKDIR /app
 
@@ -16,8 +16,5 @@ RUN chmod +x gradlew
 # Set environment variables
 ENV JVM_OPTS="-Xmx3200m"
 ENV TERM="dumb"
-
-# Build the project
-RUN ./gradlew publish
 
 CMD ["./gradlew", "build"]
