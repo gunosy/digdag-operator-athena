@@ -1,5 +1,5 @@
 # digdag-operator-athena
-[![Jitpack](https://jitpack.io/v/pro.civitaspo/digdag-operator-athena.svg)](https://jitpack.io/#pro.civitaspo/digdag-operator-athena) [![CircleCI](https://circleci.com/gh/civitaspo/digdag-operator-athena.svg?style=shield)](https://circleci.com/gh/civitaspo/digdag-operator-athena) [![Digdag](https://img.shields.io/badge/digdag-v0.9.27-brightgreen.svg)](https://github.com/treasure-data/digdag/releases/tag/v0.9.27)
+[![Jitpack](https://jitpack.io/v/com.github.Gunosy/digdag-operator-athena.svg)](https://jitpack.io/#com.github.Gunosy/digdag-operator-athena) [![Digdag](https://img.shields.io/badge/digdag-v0.9.27-brightgreen.svg)](https://github.com/treasure-data/digdag/releases/tag/v0.9.27)
 
 digdag plugin for operating a query on athena.
 
@@ -15,7 +15,7 @@ _export:
     repositories:
       - https://jitpack.io
     dependencies:
-      - pro.civitaspo:digdag-operator-athena:0.4.0
+      - com.github.Gunosy:digdag-operator-athena:0.4.1
   athena:
     auth_method: profile
 

@@ -75,7 +75,7 @@
 * [New Feature] Add `workgroup` option.
 * [Breaking Change - `athena.query`] Remove the `output` option as the deprecation is notified from before.
 * [Deprecated - `athena.ctas>`] Make `select_query` deprecated.
-* [Note] Introduce `pro.civitaspo.digdag.plugin.athena.aws` package to divide dependencies about aws.
+* [Note] Introduce `com.github.Gunosy.digdag.plugin.athena.aws` package to divide dependencies about aws.
 * [Note] Use the Intellij formatter instead of spotless, so remove spotless from CI.
 
 

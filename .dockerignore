@@ -1,0 +1,10 @@
+.git
+.github
+.idea
+.gradle
+build
+*.md
+.gitignore
+.circleci
+example
+LICENSE.txt
