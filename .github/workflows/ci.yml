@@ -5,7 +5,6 @@ on:
     branches:
       - develop
       - main
-      - adnw-7758  # Temporary: for testing workflow
   pull_request:
     branches:
       - develop
