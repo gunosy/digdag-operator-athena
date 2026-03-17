@@ -1,3 +1,6 @@
+# This CircleCI configuration has been disabled.
+# Please use GitHub Actions instead (.github/workflows/ci.yml)
+
 version: 2
 
 references:
@@ -25,10 +28,11 @@ jobs:
       - checkout
       - run: ./example/run.sh
 
-workflows:
-  version: 2
-
-  merge-before:
-    jobs:
-      - build
+# Workflows section commented out to disable CircleCI
+# workflows:
+#   version: 2
+#
+#   merge-before:
+#     jobs:
+#       - build
   
