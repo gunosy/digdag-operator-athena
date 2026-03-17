@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./build:/app/build
+      - gradle-cache:/root/.gradle
+    environment:
+      - JVM_OPTS=-Xmx3200m
+      - TERM=dumb
+    command: ./gradlew publish
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./build:/app/build
+      - gradle-cache:/root/.gradle
+    environment:
+      - JVM_OPTS=-Xmx3200m
+      - TERM=dumb
+    command: ./gradlew test
+
+volumes:
+  gradle-cache:
