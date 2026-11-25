@@ -1,3 +1,8 @@
+0.4.2 (2026-11-25)
+==================
+* [Enhancement] Update dependencies: aws-sdk 1.11.653 -> 1.12.797, jackson 2.9.9 -> 2.18.12
+* [Enhancement] Relocate bundled jackson so that it does not mix with digdag's jackson
+
 0.4.0 (2019-10-20)
 ==================
 * [Enhancement] Update dependencies: aws-sdk 1.11.587  -> 1.11.653,  digdag 0.9.37  -> 0.9.39
