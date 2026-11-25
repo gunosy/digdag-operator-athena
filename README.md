@@ -15,7 +15,7 @@ _export:
     repositories:
       - https://jitpack.io
     dependencies:
-      - com.github.Gunosy:digdag-operator-athena:0.4.2
+      - com.github.Gunosy:digdag-operator-athena:v0.4.2
   athena:
     auth_method: profile
 
