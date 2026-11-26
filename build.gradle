@@ -5,10 +5,11 @@ plugins {
 }
 
 group = 'com.github.Gunosy'
-version = '0.4.1'
+version = '0.4.2'
 
 def digdagVersion = '0.9.42'
-def awsSdkVersion = "1.11.653"
+def awsSdkVersion = "1.12.797"
+def jacksonVersion = "2.18.12"
 def scalaSemanticVersion = "2.13.0"
 def depScalaVersion = "2.13"
 
@@ -19,6 +20,7 @@ repositories {
 dependencies {
     compile group: 'io.digdag', name: 'digdag-spi', version: digdagVersion
     compile group: 'io.digdag', name: 'digdag-plugin-utils', version: digdagVersion
+    compile platform("com.fasterxml.jackson:jackson-bom:$jacksonVersion")
 
     // https://mvnrepository.com/artifact/org.scala-lang/scala-library
     compile group: 'org.scala-lang', name: 'scala-library', version: scalaSemanticVersion
@@ -40,6 +42,10 @@ shadowJar {
     dependencies {
         exclude(dependency('io.digdag:.*'))
     }
+    // The shadow jar is not Multi-Release, so these classes are never loaded. Shadow 5.1 (ASM) cannot read Java 17+ class files in them.
+    exclude 'META-INF/versions/**'
+    // digdag loads com.fasterxml.jackson.databind.annotation from its own classloader first; keep the bundled jackson separate from it.
+    relocate 'com.fasterxml.jackson', 'com.github.Gunosy.digdag.plugin.athena.shaded.com.fasterxml.jackson'
 }
 
 publishing {
